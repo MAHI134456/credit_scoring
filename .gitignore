@@ -1,0 +1,11 @@
+# Ignore the data directory and all csv files
+data/
+
+*.csv
+# Ignore the logs directory
+logs/
+
+# ignore all pycache directories
+__pycache__/
+# Ignore all .pyc files
+*.pyc
