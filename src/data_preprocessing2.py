@@ -136,3 +136,27 @@ if __name__ == "__main__":
     X_transformed_df.to_csv('data/processed/model_ready.csv', index=False)
 
     print("✅ Saved to data/processed/model_ready.csv")
+
+    # Load your cleaned data
+df = pd.read_csv('data/processed/credit_data_clean.csv')
+
+# ✅ Save CustomerId separately
+ids = df[['CustomerId']].reset_index(drop=True)
+
+# ✅ Build your pipeline as usual
+pipeline = build_pipeline(df)
+
+# ✅ Transform your features
+X_transformed = pipeline.fit_transform(df)
+
+# ✅ Convert to DataFrame
+X_transformed_df = pd.DataFrame(X_transformed).reset_index(drop=True)
+
+# ✅ Concatenate IDs back
+final_df = pd.concat([ids, X_transformed_df], axis=1)
+
+# ✅ Save model-ready data WITH CustomerId
+final_df.to_csv('data/processed/model_ready.csv', index=False)
+
+print("✅ model_ready.csv now includes CustomerId")
+print(final_df.columns)
