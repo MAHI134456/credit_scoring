@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/tsion/credit_scoring/mlruns/799267514854454171/models/m-0b89e88d619f4a4494c5fd36d14dac4c/artifacts
+creation_timestamp: 1751484830154
+experiment_id: '799267514854454171'
+last_updated_timestamp: 1751484834104
+model_id: m-0b89e88d619f4a4494c5fd36d14dac4c
+model_type: null
+name: model
+source_run_id: f857d760c57546818d76711564b7d343
+status: 2
+status_message: null

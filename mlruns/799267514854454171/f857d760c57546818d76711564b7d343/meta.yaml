@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/tsion/credit_scoring/mlruns/799267514854454171/f857d760c57546818d76711564b7d343/artifacts
+end_time: 1751484834126
+entry_point_name: ''
+experiment_id: '799267514854454171'
+lifecycle_stage: active
+run_id: f857d760c57546818d76711564b7d343
+run_name: random_forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751484820984
+status: 3
+tags: []
+user_id: tsion

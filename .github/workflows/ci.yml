@@ -2,12 +2,10 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Run linter
+      run: |
+        pip install flake8
+        flake8 .
+
     - name: Run tests
       run: |
-        pytest tests/
+        pytest

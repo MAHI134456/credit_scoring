@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/tsion/credit_scoring/mlruns/799267514854454171/models/m-0b89e88d619f4a4494c5fd36d14dac4c/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 3.1.1
+model_id: m-0b89e88d619f4a4494c5fd36d14dac4c
+model_size_bytes: 1524414
+model_uuid: m-0b89e88d619f4a4494c5fd36d14dac4c
+prompts: null
+run_id: f857d760c57546818d76711564b7d343
+utc_time_created: '2025-07-02 19:33:50.218229'
