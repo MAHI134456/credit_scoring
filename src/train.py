@@ -85,3 +85,11 @@ for name, config in models.items():
         print(f"✅ {name} | Best params: {clf.best_params_} | AUC: {roc:.3f}")
 
 print("✅ Training & tracking done.")
+
+import mlflow
+mlflow.set_tracking_uri("file:/app/mlruns")
+# ... your model training code ...
+mlflow.sklearn.log_model(clf.best_estimator_, "model", registered_model_name="credit_scoring_model")
+client = mlflow.tracking.MlflowClient()
+latest = client.get_latest_versions("credit_scoring_model", stages=["None"])[0]
+client.set_registered_model_alias("credit_scoring_model", "production", latest.version)
